@@ -20,15 +20,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-<<<<<<< HEAD
 MODEL = load_model("wheatleaf3.h5")
 
 CLASS_NAMES = ["Healthy", "septoria", "stripe_rust"]
-=======
-MODEL = tf.keras.models.load_model("models\1")
-
-CLASS_NAMES = ["Leaf Rust", "Stem Rust", "Healthy"]
->>>>>>> 7a98074d32a5848c779037585b23a67ec2fcff0a
 
 
 @app.get("/ping")
@@ -52,11 +46,6 @@ async def predict(file: UploadFile = File(...)):
     confidence = np.max(predictions[0])
     return {"class": predicted_class, "confidence": float(confidence)}
 
-<<<<<<< HEAD
 
 if __name__ == "__main__":
     uvicorn.run(app, host="localhost", port=8000)
-=======
-if __name__ == "__main__":
-    uvicorn.run(app, debug=True)
->>>>>>> 7a98074d32a5848c779037585b23a67ec2fcff0a
