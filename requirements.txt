@@ -1,8 +1,13 @@
-tensorflow
+tensorflow-cpu
 fastapi
 uvicorn
 python-multipart
 pillow
+<<<<<<< HEAD
 tensorflow-serving-api
 matplotlib
 numpy
+=======
+matplotlib
+numpy
+>>>>>>> 7a98074d32a5848c779037585b23a67ec2fcff0a
